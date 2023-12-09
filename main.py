@@ -1,6 +1,6 @@
 from API_KEY import API_KEY
 import streamlit as st
-# import openai as oai
+import openai as oai
 # from PIL import Image
 
 # print(API_KEY)
