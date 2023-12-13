@@ -14,7 +14,7 @@ if 'dic' not in st.session_state:
 st.title("Birdhaus Book Writing Online Platform Powered by AI")
 # mode_topic = None
 st.sidebar.image('logo.jpg')
-mode_topic = st.sidebar.selectbox('Topic', ['IT', 'Marketing', 'Medecine', 'Sport', 'Culture'], index=None)
+mode_topic = st.sidebar.selectbox('Topic', ['IT', 'Marketing', 'Medicine', 'Sport', 'Culture'], index=None)
 st.session_state.dic['TOPIC'] = mode_topic
 
 select_subtopic = None
