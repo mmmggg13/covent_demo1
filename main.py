@@ -1,11 +1,13 @@
-from API_KEY import API_KEY
+# from API_KEY import API_KEY
 import streamlit as st
 import openai as oai
 from openai import OpenAI
 import time
 import random
 
-oai.api_key = API_KEY
+# oai.api_key = API_KEY
+
+api_key = st.secrets.api_key
 
 selected_options = {}
 if 'dic' not in st.session_state:
@@ -57,7 +59,7 @@ if options:
     st.write('Selected options: ', st.session_state.dic)
 
 def chat_gpt(prompt, tokens=None, temperature=None):
-    client = OpenAI(api_key=oai.api_key)
+    client = OpenAI(api_key=api_key)
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}]
